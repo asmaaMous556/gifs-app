@@ -11,7 +11,11 @@ export class GifsService {
   constructor( private http :HttpClient) { }
 
   trendingGifs(){
-    return this.http.get(this.url);
+    return this.http.get(this.url+'trending',{
+      params:{
+        key:this.key
+      }
+    });
   }
 
   search (q:string){

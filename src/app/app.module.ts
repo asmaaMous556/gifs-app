@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { DetailsComponent } from './components/details/details.component';
 import { NgxMasonryModule } from 'ngx-masonry';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { NgxMasonryModule } from 'ngx-masonry';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxMasonryModule
+    NgxMasonryModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
