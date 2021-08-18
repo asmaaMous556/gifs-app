@@ -27,5 +27,12 @@ export class GifsService {
    })
   }
 
+  trendingSearch(){
+    return this.http.get(this.url+'categories',{
+      params:{
+        key:this.key
+      }
+    })
+  }
   
 }

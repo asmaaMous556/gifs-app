@@ -1,3 +1,57 @@
 .masonry-item{
-    width:200px;
+    width:250px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 5px;
 }
+
+.logo{
+color: #007ADD;
+background-color: #ffffff;
+font-size:40px;
+font-family:Arial, Helvetica, sans-serif;
+height: 22px;
+width:88px;
+
+}
+.search-bar{
+ 
+   
+}
+
+.input-search{
+    border: 1px solid #E8E8E8E8;
+    font-weight: 600;
+    font-size: 16px;
+    height: 50px;
+    box-shadow: 0.5px 1px  #E8E8E8E8;
+}
+
+.search-bar-wrapper {
+    background-color: #007ADD;
+ 
+    padding:12px 20px 12px 20px
+
+}
+input ::placeholder{
+    font-family: Inter var,helvetica,arial,sans-serif;
+    font-weight: 600;
+    padding: 12px 20px;
+}
+
+
+.subheadline2{
+    font-size: 30px;
+    color: black;
+    font-weight: 700;
+}
+
+.img{
+    margin: 10px 10px 10px 10px;
+    border-radius: 5px;
+    width: 120px;
+}
+.info{
+    font-size: 18px;
+    font-weight: bold;
+}
+

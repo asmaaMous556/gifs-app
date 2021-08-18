@@ -1,10 +1,34 @@
+<div class="row">
+
+</div>
 <div class="container">
     <div class="row">
-        <ngx-masonry>
-            <div ngxMasonryItem class="masonry-item">  
-           <!-- <img [src]="" alt=""> -->
-          
-           </div>
-          </ngx-masonry>
+        <div class="text-start">
+            <div class="logo"> tenor</div>
+        </div>
+        <div class="search-bar-wrapper mt-5">
+            <div>
+                <input type="text" class="form-control input-search" id="" aria-describedby=""
+                    placeholder="Search for Gifs and Stickers">
+            </div>
+        </div>
+        <div class="subheadline2">Trending Tenor Searches</div>
+            <ngx-masonry>
+                <div class="">
+                    <div ngxMasonryItem *ngFor="let tag of tags">
+                        <img class="img" [src]="tag.image" alt="">
+                        <div class="mb-3 info">{{tag.searchterm}}</div>
+                    </div>
+                </div>
+            </ngx-masonry>
+            
+        <div class="mt-5">
+            <div class="text-start subheadline2">Trending GIFs</div>
+            <ngx-masonry>
+                <div ngxMasonryItem *ngFor="let media of media">
+                    <img class="masonry-item" [src]="media.media[0].gif.url" alt="">
+                </div>
+            </ngx-masonry>
+        </div>
     </div>
 </div>
