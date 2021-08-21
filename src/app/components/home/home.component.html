@@ -13,22 +13,52 @@
             </div>
         </div>
         <div class="subheadline2">Trending Tenor Searches</div>
-            <ngx-masonry>
-                <div class="">
-                    <div ngxMasonryItem *ngFor="let tag of tags">
-                        <img class="img" [src]="tag.image" alt="">
-                        <div class="mb-3 info">{{tag.searchterm}}</div>
-                    </div>
-                </div>
-            </ngx-masonry>
-            
-        <div class="mt-5">
-            <div class="text-start subheadline2">Trending GIFs</div>
-            <ngx-masonry>
-                <div ngxMasonryItem *ngFor="let media of media">
-                    <img class="masonry-item" [src]="media.media[0].gif.url" alt="">
-                </div>
-            </ngx-masonry>
+       <div class="">
+        <carousel>
+            <div class="carousel-cell" *ngFor="let tag of tags" >
+                <img  src="{{tag.image}}">
+            </div>
+        </carousel>
+       </div>
+         <!-- <ngx-masonry>
+        <div class="">
+            <div ngxMasonryItem *ngFor="let tag of tags">
+                <img class="img" [src]="tag.image" alt="">
+                <div class="mb-3 info">{{tag.searchterm}}</div>
+            </div>
         </div>
+    </ngx-masonry> -->
+
+    <div class="mt-5">
+        <div class="text-start subheadline2">Trending GIFs</div>
+        <ngx-masonry>
+            <div ngxMasonryItem *ngFor="let media of media">
+                <img class="masonry-item" [src]="media.media[0].gif.url" alt="">
+            </div>
+        </ngx-masonry>
     </div>
 </div>
+
+
+
+<!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item " *ngFor="let tag of tags">
+        <img class="d-block w-100" src="{{tag.image }}" alt="First slide">
+      </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+   
+</div> -->
