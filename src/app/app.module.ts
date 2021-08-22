@@ -8,11 +8,14 @@ import { DetailsComponent } from './components/details/details.component';
 import { NgxMasonryModule } from 'ngx-masonry';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { SearchComponent } from './components/search/search.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DetailsComponent
+    DetailsComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,9 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     HttpClientModule,
     NgxMasonryModule,
     BrowserAnimationsModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

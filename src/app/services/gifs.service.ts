@@ -19,7 +19,7 @@ export class GifsService {
   }
 
   search (q:string){
-   return this.http.get(this.url+'/search',{
+   return this.http.get(this.url+'search',{
      params:{
        q:q,
        key:this.key

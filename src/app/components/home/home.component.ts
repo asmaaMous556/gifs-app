@@ -1,5 +1,7 @@
+import { Route } from '@angular/compiler/src/core';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { GifsService } from 'src/app/services/gifs.service';
 
 @Component({
@@ -12,7 +14,8 @@ media :any;
 gifs: any;
 url:string='';
 tags: any[]=[]
-  constructor(private gifsService:GifsService) { }
+keyWord:string='';
+  constructor(private gifsService:GifsService,private route :Router) { }
 
   ngOnInit(): void {
 
@@ -32,8 +35,12 @@ tags: any[]=[]
           console.log(tag.searchterm)
         })
       })
-      
-    
+  }
+  
+  search(keyWord:string){
+    console.log(keyWord);
+   let url=   this.route.navigate(['/'+keyWord])
+    console.log(url);
   }
 
 }

@@ -8,7 +8,7 @@
         </div>
         <div class="search-bar-wrapper mt-5">
             <div>
-                <input type="text" class="form-control input-search" id="" aria-describedby=""
+                <input type="text" class="form-control input-search" [(ngModel)]="keyWord" (keyup.enter)="search(keyWord)" id="" aria-describedby=""
                     placeholder="Search for Gifs and Stickers">
             </div>
         </div>
