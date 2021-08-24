@@ -1,18 +1,13 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <div class="row">
-                <div class="col-sm-6">
-                    <ngx-masonry>
-                        <div class="">
-                            <div ngxMasonryItem *ngFor="">
-                                <img class="img" [src]="" alt="">
-                                <div class="mb-3 info"></div>
-                            </div>
-                        </div>
-                    </ngx-masonry>
-
-                </div>
+            <div class="mt-5">
+                <div class="text-start subheadline2">Trending GIFs</div>
+                <ngx-masonry>
+                    <div ngxMasonryItem *ngFor="let media of media">
+                        <img class="masonry-item" [src]="media.media[0].gif.url" alt="">
+                    </div>
+                </ngx-masonry>
             </div>
 
         </div>

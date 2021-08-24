@@ -9,7 +9,7 @@ import { GifsService } from 'src/app/services/gifs.service';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-
+media :any
   constructor(private route:ActivatedRoute,private gifsService:GifsService) { 
 
   
@@ -18,7 +18,11 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(keyword=>{
       console.log(keyword.key);
-      this.gifsService.search(keyword.key).subscribe(res=>{console.log(res);})
+      this.gifsService.search(keyword.key).subscribe((res:any)=>{
+       
+        this.media=res.results
+        
+      })
       
     })
  
